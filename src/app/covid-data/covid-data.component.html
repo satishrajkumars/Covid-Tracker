@@ -1,0 +1,69 @@
+<div style="display: block;" *ngIf="covidData" class="centered-container">
+    <label for="state"> State </label>
+    <select id="state" [(ngModel)]="selectedState" (change)="onStateChange()" class="custom-dropdown">
+        <option *ngFor="let state of stateOptions" [value]="state">{{ state }}</option>
+    </select>
+
+    <div class="linechart-container">
+        <canvas baseChart
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [legend]="lineChartLegend"
+                [type]="lineChartType">
+        </canvas>
+    </div>
+
+    <label for="datepicker"> Select a date </label>
+    <input
+        type="text"
+        class="date"
+        id="datepicker"
+        [(ngModel)]="selectedDate"
+        [bsConfig]="datepickerConfig"
+        (ngModelChange)="onDateChange()"
+        bsDatepicker
+    />
+
+    <div class="content">
+        <div class="table-container">
+        <h2>Data Table</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th class="header-cell">Category</th>
+                <th class="header-cell">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Positive Cases</td>
+                <td>{{ dailyCovidData.positive }}</td>
+            </tr>
+            <tr>
+                <td>Negative Cases</td>
+                <td>{{ dailyCovidData.negative }}</td>
+            </tr>
+            <tr>
+                <td>Positive Increase</td>
+                <td>{{ dailyCovidData.positiveIncrease }}</td>
+            </tr>
+            <tr>
+                <td>Negative Increase</td>
+                <td>{{ dailyCovidData.negativeIncrease }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="barchart-container">
+        <canvas baseChart
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [legend]="barChartLegend"
+                [type]="barChartType">
+        </canvas>
+    </div>
+
+</div>

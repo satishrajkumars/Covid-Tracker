@@ -1,0 +1,82 @@
+
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+  }
+  
+.custom-dropdown {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .custom-dropdown select {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  
+  /* Style for the table container */
+  .table-container {
+    margin: 20px auto;
+    max-width: 400px;
+  }
+  
+  /* Style for the table */
+  .table {
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  /* Style for table header cells */
+  .header-cell {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style for table data cells */
+  td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Style for table data cells with numeric values */
+  td:nth-child(2) {
+    text-align: center;
+  }
+
+  .date{
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+  }
+
+  .linechart-container{
+    padding: 50px 150px 50px 150px; /* top right bottom left */
+  }
+
+  .barchart-container{
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
